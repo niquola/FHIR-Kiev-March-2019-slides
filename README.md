@@ -7,6 +7,12 @@ Nikolai Ryzhikov (gh/tw/tg @niquola)
 CTO @ Health Samurai
 
 
+
+
+
+
+
+
 ## Health Samurai
 
 * Aidbox - FHIR backend
@@ -14,7 +20,15 @@ CTO @ Health Samurai
 * A lot of OS
 
 
-##  1. Questions
+
+
+
+
+
+
+
+
+##  1. Agenda
 
 1. How to persist FHIR data?
 2. How to search FHIR data?
@@ -37,9 +51,6 @@ Provide FHIR API to your existing data
 
 
 
-
-
-
 ## 4. FHIR API
 
 read: GET /Patient/pt-id
@@ -51,7 +62,7 @@ update: DELETE /Patient/pt-id
 
 transaction: POST /
 
-deme with aidbox
+demo with aidbox
 
 
 
@@ -264,6 +275,7 @@ select *
 ```
 
 
+https://fbdemo.aidbox.app/
 You can mix SQL & JSON
 
 ```sql
