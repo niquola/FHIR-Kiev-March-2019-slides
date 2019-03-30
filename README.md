@@ -1,10 +1,24 @@
 # FHIR storage & analytics
 
+https://github.com/niquola/FHIR-Kiev-March-2019-slides
+
+Nikolai Ryzhikov (gh/tw/tg @niquola)
+
+CTO @ Health Samurai
+
+
+## Health Samurai
+
+* Aidbox - FHIR backend
+* Fhirbase - OS database for FHIR
+* A lot of OS
+
 
 ##  1. Questions
 
 1. How to persist FHIR data?
 2. How to search FHIR data?
+
 
 
 
@@ -14,10 +28,17 @@
 2. Brand new FHIR system
 
 
-## 3. FHIR API on Legacy
 
-* R & Search API
-* CUD & Transaction
+
+## 3. FHIR Facade (legacy)
+
+Provide FHIR API to your existing data
+
+
+
+
+
+
 
 ## 4. FHIR API
 
@@ -30,21 +51,30 @@ update: DELETE /Patient/pt-id
 
 transaction: POST /
 
-
 deme with aidbox
 
-## 5. Legacy
-
-FHIR facade!
-
-* Map legacy schema to FHIR
-* Map FHIR operations to legacy queries 
-* Provide READONLY API
-* Profile FHIR data
-* WRITE API
 
 
-## 6. Mapping
+## 5. Legacy Facade
+
+TODO:
+
+1. Map legacy schema to FHIR
+2. Map FHIR operations to legacy queries 
+
+
+Levels:
+
+1. READONLY API
+2. WRITE API
+
+
+Architecture:
+
+1. [System] <-(transform)-> API...
+2. [System] <-> [FHIR server] <-> API...
+
+## 6. FHIR Mapping
 
 Patient
 
@@ -78,6 +108,12 @@ birthDate: $ .bod
 jute  demo: https://jute-demo.aidbox.app/index.html
 
 
+FHIR mapping language - https://www.hl7.org/fhir/mapping-language.html
+
+BX mapping by me - comming soon!
+
+
+
 ## 7. Map FHIR Operations
 
 ```http
@@ -96,6 +132,7 @@ WHERE last_name ilike 'ivanov%'
 Easy for simple cases, 
 Can get too complicated
 
+
 ##  8. WRITE FHIR BACK
 
 FHIR is too flexible
@@ -109,12 +146,17 @@ Profile FHIR!
 * fix terminology
 * define extensions
 
-Welcome to wondeful world of PROFILING!
+Welcome to wonderful world of PROFILING!
+
+
+
 
 
 ## 9. FHIR-FHIRST  System
 
 You want to store all FHIR information!
+
+
 
 
 ## 10. Nature of FHIR data
@@ -124,11 +166,17 @@ You want to store all FHIR information!
 
 See FHIR pt ...
 
+
+
+
 ## 11. Options
 
 * Tabular
 * Document
 * Hybrid
+
+
+
 
 ## 12. Tabular
 
@@ -147,12 +195,17 @@ and will got xK tables.
 
 
 
+
+
 ## 13. Tablar trade-offs
 
 JOINS! kill the performance
 
 * hierarchiecal structure
 * extensibility
+
+
+## 13. HAPI & Vonk
 
 
 ## 14. Document
@@ -164,10 +217,17 @@ Store FHIR in JSON as is!
 * Easy CRUD and simple Search
 * Clusters out of the box
 
+
+
+
 ## 15. Document trade-offs 
 
 * - ACID
 * - SQL
+
+
+
+
 
 ## 16. Hybrid
 
@@ -177,6 +237,10 @@ Store FHIR as is in relational databases
 * json in mysql, oracle, mssql
 * protobuf in bigquery
 * struct in spark
+
+
+
+
 
 ## 17. Fhirbase & Aidbox
 
@@ -313,6 +377,7 @@ identifier:
 ## 24. Welcome
 
 * SPb FHIR meetup 4 april
+  * https://t.me/FHIRmeetups
 
 * Montreal May 
   * Bulk API & S&A together as a Population Track
