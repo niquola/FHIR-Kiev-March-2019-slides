@@ -75,7 +75,7 @@ birthDate: $ .bod
 
 ```
 
-> jute  demo
+jute  demo: https://jute-demo.aidbox.app/index.html
 
 
 ## 7. Map FHIR Operations
